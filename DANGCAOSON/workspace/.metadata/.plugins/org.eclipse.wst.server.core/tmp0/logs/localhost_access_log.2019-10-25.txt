@@ -1,0 +1,15 @@
+127.0.0.1 - - [25/Oct/2019:13:37:09 +0700] "GET / HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [25/Oct/2019:13:37:09 +0700] "GET / HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [25/Oct/2019:13:37:11 +0700] "GET /trang-chu HTTP/1.1" 200 7594
+0:0:0:0:0:0:0:1 - - [25/Oct/2019:13:37:14 +0700] "GET /dang-nhap?action=login HTTP/1.1" 200 2336
+0:0:0:0:0:0:0:1 - - [25/Oct/2019:13:37:19 +0700] "POST /dang-nhap?action=login HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [25/Oct/2019:13:37:19 +0700] "GET /dang-nhap?action=login&message=username_password_invalid&alert=danger HTTP/1.1" 200 2373
+0:0:0:0:0:0:0:1 - - [25/Oct/2019:13:37:26 +0700] "POST /dang-nhap?action=login&message=username_password_invalid&alert=danger HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [25/Oct/2019:13:37:26 +0700] "GET /admin-home HTTP/1.1" 200 6373
+0:0:0:0:0:0:0:1 - - [25/Oct/2019:13:37:29 +0700] "GET /admin-new?type=list&page=1&maxPageItem=2&sortName=title&sortBy=desc HTTP/1.1" 200 11452
+0:0:0:0:0:0:0:1 - - [25/Oct/2019:13:37:33 +0700] "GET /admin-new?type=edit&id=14 HTTP/1.1" 200 11841
+0:0:0:0:0:0:0:1 - - [25/Oct/2019:13:37:41 +0700] "PUT /api-admin-new HTTP/1.1" 200 417
+0:0:0:0:0:0:0:1 - - [25/Oct/2019:13:37:58 +0700] "GET /admin-new?type=list&page=1&maxPageItem=2&sortName=title&sortBy=desc HTTP/1.1" 200 11444
+0:0:0:0:0:0:0:1 - - [25/Oct/2019:13:38:01 +0700] "GET /admin-new?type=edit&id=10 HTTP/1.1" 200 11839
+0:0:0:0:0:0:0:1 - - [25/Oct/2019:13:38:06 +0700] "GET /admin-new?type=edit HTTP/1.1" 200 11284
+0:0:0:0:0:0:0:1 - - [25/Oct/2019:13:38:23 +0700] "PUT /api-admin-new HTTP/1.1" 500 1800

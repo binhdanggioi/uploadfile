@@ -1,0 +1,78 @@
+jsp:
+<input type="file" id="uploadImage"/>
+
+javascript:
+var thumbnailBase64 = '';
+var thumbnailImageName = '';
+
+$('#uploadImage').change(function (event) {
+        var reader = new FileReader();
+        var file = $(this)[0].files[0];
+        reader.onload = function(e){
+            thumbnailBase64 = e.target.result;
+            thumbnailImageName = file.name;
+        };
+        reader.readAsDataURL(file);
+});
+
+Trong java:
+
+public static void writeOrUpdate(String path, byte[] bytes) {
+        File file = new File(path);
+        if (!file.exists()) {
+            file.mkdir();
+        }
+        try (FileOutputStream fop = new FileOutputStream(path)) {
+            fop.write(bytes);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+}
+
+private String saveImage(NewModel newModel) {
+        String path = "/doanabc/"+newModel.getThumbnailImageName();
+        byte[] bytes = Base64.decodeBase64(newModel.getThumbnailBase64().getBytes());
+        UploadFileUtils.writeOrUpdate(path, bytes);
+        return path;
+}
+
+Hiển thị:
+Trong web.xml
+<servlet>
+        <servlet-name>DisplayImage</servlet-name>
+        <servlet-class>com.laptrinhjavaweb.utils.ReadFileUtils</servlet-class>
+</servlet>
+<servlet-mapping>
+        <servlet-name>DisplayImage</servlet-name>
+        <url-pattern>/repository/*</url-pattern>
+</servlet-mapping>
+	
+	
+	
+protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        String imageUrl = request.getRequestURI();
+        int repIndex = imageUrl.indexOf("/repository/");
+        String relativeImagePath = null;
+        if(repIndex != -1) {
+            repIndex += "/repository/".length();
+            relativeImagePath = imageUrl.substring(repIndex);
+        }
+        ServletOutputStream outStream;
+        outStream = response.getOutputStream();
+        FileInputStream fin = new FileInputStream("/doanabc" + relativeImagePath);
+        BufferedInputStream bin = new BufferedInputStream(fin);
+        BufferedOutputStream bout = new BufferedOutputStream(outStream);
+        int ch =0;
+        while((ch=bin.read())!=-1)
+            bout.write(ch);
+        bin.close();
+        fin.close();
+        bout.close();
+        outStream.close();
+}
+
+JSP:
+<c:set var="image" value="/repository/${model.thumbnail}"/>
+<img src="${image}" width="300px" height="300px">
+

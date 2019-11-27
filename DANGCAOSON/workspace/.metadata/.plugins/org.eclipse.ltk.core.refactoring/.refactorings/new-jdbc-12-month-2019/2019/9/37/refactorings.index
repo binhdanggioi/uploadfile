@@ -1,0 +1,27 @@
+1568078259100	Encapsulate field 'ids'
+1568252195833	Delete element
+1568252354169	Delete element
+1568252368614	Copy compilation unit
+1568298506315	Rename package 'com.laptrinhjavaweb'
+1568298520784	Delete element
+1568298561741	Rename package 'com.laptrinhjavaweb.controller.admin'
+1568298582367	Rename package 'com.laptrinhjavaweb.utils'
+1568298604897	Rename package 'com.laptrinhjavaweb.service.impl'
+1568298617098	Rename package 'com.laptrinhjavaweb.service'
+1568298628388	Rename package 'com.laptrinhjavaweb.model'
+1568298639177	Rename package 'com.laptrinhjavaweb.mapper'
+1568298656890	Rename package 'com.laptrinhjavaweb.dao.impl'
+1568298670519	Rename package 'com.laptrinhjavaweb.controller.admin.api'
+1568298679470	Rename package 'com.laptrinhjavaweb.dao'
+1568298696559	Rename package 'com.laptrinhjavaweb.controller.web'
+1568301516742	Encapsulate field 'listResult'
+1568302044470	Rename type 'Systemconstant'
+1568305915664	Encapsulate field 'page'
+1568305919313	Encapsulate field 'totalPage'
+1568305923335	Encapsulate field 'limit'
+1568339351968	Encapsulate field 'totalItem'
+1568340769203	Encapsulate field 'maxPageItem'
+1568341694967	Encapsulate field 'page'
+1568341699560	Encapsulate field 'totalPage'
+1568341704555	Encapsulate field 'totalItem'
+1568341708815	Encapsulate field 'maxPageItem'

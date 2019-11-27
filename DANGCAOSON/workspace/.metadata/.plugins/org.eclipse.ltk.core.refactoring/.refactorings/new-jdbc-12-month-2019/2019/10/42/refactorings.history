@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Encapsulate field &apos;com.websitetintuc.model.UserModel.role&apos; in &apos;com.websitetintuc.model.UserModel&apos;&#x0D;&#x0A;- Original project: &apos;new-jdbc-12-month-2019&apos;&#x0D;&#x0A;- Original element: &apos;com.websitetintuc.model.UserModel.role&apos;&#x0D;&#x0A;- Getter method name: &apos;getRole&apos;&#x0D;&#x0A;- Setter method name: &apos;setRole&apos;&#x0D;&#x0A;- Field visibility: &apos;public&apos;&#x0D;&#x0A;- Use getter and setter methods in declaring type" comments="false" declaring="true" description="Encapsulate field &apos;role&apos;" flags="589830" getter="getRole" id="org.eclipse.jdt.ui.self.encapsulate" input="/src\/main\/java&lt;com.websitetintuc.model{UserModel.java[UserModel^role" insertion="9" setter="setRole" stamp="1570962820105" version="1.0" visibility="1"/>
+</session>
